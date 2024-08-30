@@ -5,6 +5,8 @@ A method for web extensions to execute fetch requests from content scripts in ba
 js
 
 ```js
+// Based on https://github.com/mefengl/content-fetch
+
 function retry(fn, attempts = 3, delay = 3000) {
   return async (...args) => {
     for (let i = 0; i < attempts; i++) {
@@ -84,6 +86,8 @@ exampleContentFetch('https://example.com/api', {
 ts
 
 ```ts
+// Based on https://github.com/mefengl/content-fetch
+
 function retry(fn: any, attempts = 3, delay = 3000) {
   return async (...args: any) => {
     for (let i = 0; i < attempts; i++) {
